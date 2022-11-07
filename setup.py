@@ -70,6 +70,7 @@ from setuptools.command.install import install
 
 # prefer the repository local version of all additional libraries (instead of the installed version under site-packages)
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./additions")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./config")))
 
 from config.CRepositoryConfig import CRepositoryConfig # providing repository and environment specific information
 from additions.CExtendedSetup import CExtendedSetup # providing functions to support the extended setup process
