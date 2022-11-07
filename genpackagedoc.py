@@ -32,6 +32,7 @@ import colorama as col
 
 # prefer the repository local version of all additional libraries (instead of the installed version under site-packages)
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "./additions")))
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 from config.CRepositoryConfig import CRepositoryConfig # providing repository and environment specific information
 from GenPackageDoc.CPackageDocConfig import CPackageDocConfig
