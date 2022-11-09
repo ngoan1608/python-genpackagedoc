@@ -37,7 +37,7 @@ import os, sys, platform, shlex, subprocess, json
 import colorama as col
 import pypandoc
 
-from PythonExtensionsCollection.String.CString import CString
+from additions.PythonExtensionsCollection.String.CString import CString
 
 from GenPackageDoc.version import VERSION      # ! here wee need the package name hard coded !
 from GenPackageDoc.version import VERSION_DATE # ! here wee need the package name hard coded !

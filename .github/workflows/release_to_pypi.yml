@@ -23,12 +23,12 @@ jobs:
         - name: Install dependencies
           run: |
             sudo apt-get install -y pandoc
-            sudo apt-get install -y texlive
+            sudo apt-get install -y texlive-latex-*
             python -m pip install --upgrade build twine colorama pypandoc wheel dotdict
 
         - name: Build source and wheel distributions
           run: |
-            python -m build -n
+            PYTHONPATH=`pwd` GENDOC_LATEXPATH=`dirname $(which pdflatex)` python -m build -n
             twine check --strict dist/*
 
         - name: Publish distribution to Test PyPI
