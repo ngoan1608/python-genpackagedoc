@@ -28,7 +28,7 @@ jobs:
 
         - name: Build source and wheel distributions
           run: |
-            PYTHONPATH=`pwd` GENDOC_LATEXPATH=`dirname $(which pdflatex)` python -m build -n
+            python setup.py sdist bdist_wheel
             twine check --strict dist/*
 
         - name: Publish distribution to Test PyPI
