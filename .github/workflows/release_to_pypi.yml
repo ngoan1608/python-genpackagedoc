@@ -3,6 +3,7 @@ name: Publish GenPackageDoc to PyPI
 on:
   push:
     tags:
+      - "rel/*.*.*"
       - "rel/*.*.*.*"
 
 jobs:
